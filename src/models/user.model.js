@@ -77,7 +77,7 @@ userSchema.methods.generateRefreshToken = function(){
         email : this.email,
         fullName : this.fullName, 
     }, process.env.REFRESH_TOKEN_SECRET, {expiresIn: process.env.REFRESH_TOKEN_EXPIRY}
-};
+)}
         
 
 
