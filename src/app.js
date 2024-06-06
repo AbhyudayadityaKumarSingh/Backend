@@ -15,4 +15,11 @@ app.use(express.urlencoded({extended: true , limit: '16kb'}));
 app.use(express.static('public')); // for storing data at public folder temporarily for img , pdf files
 app.use(cookieParser());
 
+//Routes
+import userRoutes from './routes/user.routes.js';
+
+//Routes declaration
+app.use('/api/v1/users' , userRoutes) // http://localhost:5000/api/vi/users/register
+// localhost:5000/api/v1/users/login , etc
+
 export {app}
